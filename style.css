@@ -390,8 +390,8 @@ p{
   position: fixed;
   top: 0;
   right: -200%;
-  width: 300px;
-  height: 50%;
+  width: 200px;
+  height: 40%;
   margin: 0;
   padding: 80px 0;
   list-style: none;
@@ -400,6 +400,7 @@ p{
   transition-duration: .5s;
   background-color: #d8a254;
   border:3px solid #b85c00;
+  text-decoration: none;
 }
 .menu__item {
   display: block;
