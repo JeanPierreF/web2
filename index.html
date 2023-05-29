@@ -12,44 +12,70 @@
     </head>
 <body>
     
-    <input id="color-mode" type="checkbox" name="color-mode">
-    <label for="color-mode">
-      <span class="dark-mode-hide">Dark Mode</span>
-      <span class="light-mode-hide">Light Mode</span>
+    <!------------------------------------ Jour/Nuit --------------------------------------->    
+    
+    <input class="toggle--checkbox" type="checkbox" id="color-mode">
+    <label for="color-mode" class="togglelabel" id="labeljn">
+        <span class="moon">
+            <img src="./asset/pictures/moon-shape.png" alt="lune"/>
+        </span>
+        <span class="sun">
+            <img src="./asset/pictures/soleil.png" alt="soleil"/>
+        </span>
     </label>
-
+      
+   <!---------------------------------------- Menu -------------------------------------------->
+    <div id="menu">
+        <input id="menutoggle" type="checkbox" />
+        <label class="menubtn" for="menutoggle">
+            <span></span>
+        </label>
+            
+            <div class="menuface">
+                <img src="./asset/pictures/profil.png" alt="photo profil">
+                <br>
+                <ul class="menubox">
+                    <li><a class="menu__item" href="#expeencepro">Expériences Professionnelles</a></li>
+                    <li><a class="menu__item" href="#formations">Formations</a></li>
+                    <li><a class="menu__item" href="#competences">Compétences</a></li>
+                    <li><a class="menu__item" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+    </div>
+    
+    
     <div class="main">
-
+        
         <div class="contenair" id="contenair">
-        
-            <div class="menu">
-                <!--****jour-nuit****-->
-                <div class="jn">
+            
+            <!------------------------------------------------------------------------------------------------->
+            <!------------------------------------------------------------------------------------------------->
 
-                </div>
-                <!--****fonton****-->
-                <div class="patronime">
-                        <div class="prenom">Jean-Pierre FRANCOIS</div>
-                        <div class="prenomcourt">JP FRANCOIS</div>
-                </div>
-                <!--****menu bruger****-->
-        
-                <div class="burger">
-                    <input id="menu__toggle" type="checkbox" />
-                        <label class="menu__btn" for="menu__toggle">
-                            <span></span>
-                        </label>
-        
-                        <ul class="menu__box">
-                            <li><a class="menu__item" href="#expeencepro">Expériences Professionnelles</a></li>
-                            <li><a class="menu__item" href="#formations">Formations</a></li>
-                            <li><a class="menu__item" href="#competences">Compétences</a></li>
-                            <li><a class="menu__item" href="#contact">Contact</a></li>
-                            <li><a class="menu__item" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"> intéressant ! </a></li>
-                            <li><div class="monkey"><img src="./asset/pictures/tenor.gif" alt="singe"></div></li>
-                        </ul>
-                </div>
-            </div><!--fin menu-->
+        <div class="barre">
+            <!--****jour-nuit****-->
+            
+            
+            <!--****fonton****-->
+            <div class="patronime">
+                <div class="prenom">Jean-Pierre FRANCOIS</div>
+                <div class="prenomcourt">JP FRANCOIS</div>
+            </div>
+            
+            <!--****menu bruger****-->
+            
+            <div class="burger">
+            </div>
+                
+      
+        </div>
+            <!--fin menu-->
+
+
+    <!------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------->
+
+
+
               <div class="expeencepro" id="expeencepro" alt="Expériences professionnelles">
                 
                 <div class="separateur">

@@ -34,16 +34,9 @@ body{
 background-color:navy;
 height: 100%;
 display: flex;
-}
+flex-direction: column;
 
-.light-mode-hide {
-display: none;
 }
-
-.color-mode{
-display: none;
-}
-
 
 h2{
 text-align: center;
@@ -87,6 +80,228 @@ border-bottom: none;
 padding: 0 2% 0 2%;
 Margin: 0 5% 0 5%;
 }
+
+
+.barre{
+  position: sticky;
+  top: 0;
+  display: flex;
+  width:100%;
+  padding-left: 2%;
+  padding-right: 2%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1rem;
+  border: 3px solid var(--border);
+  border-top: none;
+  background-color: var(--fondfonce);
+  box-shadow: 0 35px 40px rgba(0, 0, 0, 0.40);
+  border-radius: 0 0 10px 10px;
+  z-index: 10;
+}
+
+/************************************** NOM *****************************/
+.patronime{
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.prenom,
+.prenomcourt{
+  font-family: 'Noto Sans Display', sans-serif;
+  font-size: 2rem;
+  margin: 5px;
+} 
+
+.prenomcourt{
+display: none;
+}
+/********************************burger menu*********************************/
+#menutoggle{
+  display: none;
+}
+
+.menuface img{
+  width: 80px;
+}
+
+#menu{
+  z-index: 20;
+  background: var(--fondfonce);
+  color: var(--bg);
+  border-radius: 6px;
+  box-shadow: 0 2px var(--bg), 0 4px var(--text);
+  user-select: none;
+}
+
+.menubtn {
+  cursor: pointer;
+  position: fixed;
+  top: 1%;
+  right: 10%;
+  padding: 1rem;
+  user-select: none;
+  z-index: 20;
+}
+
+.menuface {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  top: 10px;
+  right: -200%;
+  width: 200px;
+  height: fit-content;
+  margin: 0;
+  padding: 80px 0;
+  transition-duration: .5s;
+  list-style: none;
+  border-radius: 6px;
+  background-color: var(--fondfonce);
+  border:3px solid var(--border);
+  box-shadow: 0 35px 40px rgba(0, 0, 0, 0.40);
+}
+
+.menubox{
+  list-style: none;
+  text-decoration: none;
+  z-index: 20;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: 0.35s;
+}
+
+.menu__item:hover {
+  background-color: var(--fondclair);
+}*/
+
+#menutoggle {
+  right: 10px;
+  opacity: 0;
+}
+#menutoggle:checked + .menubtn > span {
+  transform: rotate(45deg);
+}
+#menutoggle:checked + .menubtn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menutoggle:checked + .menubtn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menutoggle:checked ~ .menuface {
+  right: calc(2% + 50px) !important;
+}
+.menubtn > span,
+.menubtn > span::before,
+.menubtn > span::after {
+  display: block;
+  position: absolute;
+  width: 1.5rem;
+  height: 3px;
+  background-color: #000;
+  transition-duration: .25s;
+}
+.menubtn > span::before {
+  content: '';
+  top: -8px;
+}
+.menubtn > span::after {
+  content: '';
+  top: 8px;
+}
+
+/********************************************* JN *************************************************/
+
+.toggle--checkbox{
+  display: none;
+}
+
+.toggle--checkbox:checked + .togglelabel > .moon img {
+  visibility: hidden;
+}
+
+.toggle--checkbox:checked + .togglelabel > .sun img {
+  visibility: visible;
+}
+
+#labeljn {
+  visibility: hidden;
+  top: -15px;
+}
+.moon{
+  visibility: visible;
+  color: #1f36c9;
+}
+
+.moon,
+.sun{
+  position:fixed;
+  top: 1%;
+  left: 10%;
+  border-radius: 50%;
+  z-index: 40;
+  cursor: pointer;
+}
+
+/****************************** séparateur ------------------------------*/
+
+.separateur{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.petit{
+  width: 20%;
+}
+
+.grand{
+  width: 35%;
+}
+
+.petit, .grand{
+  display: flex;
+  border: 3px solid var(--border);
+  border-radius: 50%;
+  align-items: center;
+  margin: 10px;
+  box-shadow: 0 35px 40px rgba(0, 0, 0, 0.40);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /*******************************/
 
   #color-mode:checked ~ * {
