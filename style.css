@@ -112,7 +112,7 @@ Margin: 0 5% 0 5%;
 .prenom,
 .prenomcourt{
   font-family: 'Noto Sans Display', sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 5px;
 } 
 
@@ -257,33 +257,7 @@ display: none;
   cursor: pointer;
 }
 
-/****************************** séparateur ------------------------------*/
-
-.separateur{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-.petit{
-  width: 20%;
-}
-
-.grand{
-  width: 35%;
-}
-
-.petit, .grand{
-  display: flex;
-  border: 3px solid var(--border);
-  border-radius: 50%;
-  align-items: center;
-  margin: 10px;
-  box-shadow: 0 35px 40px rgba(0, 0, 0, 0.40);
-}
-/******************************************************************************/
+/*************************************Experiences pro*****************************************/
 
 .expeencepro{
   display: flex;
@@ -291,6 +265,10 @@ display: none;
   width: 100%;
   padding: 25px;
 }
+
+
+/*************************************** formation ******************************************/
+
 
 .formations{
   width: 100%;
@@ -300,7 +278,6 @@ display: none;
   display: flex;
   position: relative;
   justify-content: center;
-  align-items: top;
   flex-wrap: wrap;
   gap: 50px 30px;
   z-index: 0;
@@ -315,7 +292,7 @@ display: none;
     width: 200px;
     height: 160px;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.40);
-    background-color: #afd095;
+    background-color: var(--bg);
     padding: 10px 0 10px 0;
     overflow: hidden;
     transition: 0.5s;   
@@ -353,28 +330,40 @@ display: none;
   justify-content: center;
   margin-top: 20px;
   background: var(--fondclair);
-  color: #fff;
   font-weight: 500;
   text-decoration: none;
   height: 25px;
   width: 100px;
-  color: black;
+  color: var(--textfonce);
   border-radius: 5px;
   box-shadow: 0 35px 40px rgba(0, 0, 0, 0.40);
 }
 
+/************************************** compétences *************************************/
+
 .competences{
   width: 80%;
-}
-
-.competences .imgdevweb{
-  display: flex;
   margin: 20px 0 20px 0;
-  justify-content: space-around;
 }
 
-.competences img{
+.imgdevweb{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px 30px;
+  z-index: 0;
+}
+
+
+.competences .imgdevweb img{
   max-width: 40px;
+}
+
+figure{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .texttab{
@@ -407,6 +396,7 @@ display: none;
 
 .contact .aboutme a img{
   height: 40px;
+  
 }
 
 .contact .contactme a{
@@ -419,6 +409,7 @@ display: none;
 .contact .contactme a img{
   height: 30px;
   margin-right: 10%;
+
 }
 
 .copyright{
